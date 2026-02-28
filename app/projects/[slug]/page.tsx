@@ -38,6 +38,7 @@ const getTechIcon = (tech: string): IconType | null => {
     "Android": SiAndroid,
     "Firebase": SiFirebase,
     "Expo": SiExpo,
+    "Push Notifications": SiExpo,
     "Twilio": SiTwilio,
     "Storybook": SiStorybook,
     "Design Tokens": SiFigma,
@@ -80,6 +81,7 @@ const getTechColor = (tech: string): string => {
     "Android": "#3DDC84",
     "Firebase": "#FFCA28",
     "Expo": "#000020",
+    "Push Notifications": "#000020",
     "Twilio": "#F22F46",
     "Storybook": "#FF4785",
     "Design Tokens": "#F24E1E",
@@ -202,8 +204,39 @@ const ParallaxImage = ({
   );
 };
 
+type ProjectResult = {
+  metric: string;
+  label: string;
+};
+
+type NextProject = {
+  slug: string;
+  title: string;
+  category: string;
+};
+
+type ProjectData = {
+  title: string;
+  subtitle: string;
+  client: string;
+  year: string;
+  services: string[];
+  launchType: "web" | "mobile";
+  websiteUrl?: string;
+  appStoreUrl?: string;
+  playStoreUrl?: string;
+  heroImage: string;
+  description: string;
+  challenge: string;
+  solution: string;
+  images: string[];
+  techStack: string[];
+  results: ProjectResult[];
+  nextProject: NextProject;
+};
+
 // Project data structure - Centralized for easy maintenance
-const projectsData: { [key: string]: any } = {
+const projectsData: Record<string, ProjectData> = {
   propus: {
     title: "Propus",
     subtitle: "Web Development",
@@ -355,75 +388,36 @@ const projectsData: { [key: string]: any } = {
   grid: {
     title: "Grid",
     subtitle: "Social Network & Booking",
-    client: "Grid App",
+    client: "Digantix — Internal Product",
     year: "2025",
-    services: ["Mobile App", "Web Development", "UI/UX Design", "Social Media"],
+    services: ["Mobile App", "UI/UX Design"],
     launchType: "mobile",
-    appStoreUrl: "#",
-    playStoreUrl: "#",
+    appStoreUrl: "",
+    playStoreUrl: "",
     heroImage: "/projects/grid/grid.jpg",
     description:
-      "Social network and court booking application for padel. Grid connects players, enables court reservations and tracking of padel community activities.",
+      "Grid is our in-house MVP product built by the Digantix team. It showcases a social + booking experience for padel players with a focused, production-ready core.",
     challenge:
-      "Padel enthusiasts had difficulties finding playing partners and available courts. A modern platform was needed to simply connect players and enable easy booking.",
+      "As an internal product, our goal was to validate the concept fast: prove that players can discover each other, book courts quickly, and keep the core experience simple and reliable.",
     solution:
-      "We developed an intuitive mobile and web application with social features, court booking system, player profiles, and the ability to organize groups and tournaments.",
+      "We built and shipped an MVP with React Native and Expo, backed by Supabase. The product includes essential social flows, booking logic, and push notifications, with UX prototyped in Figma and implemented in TypeScript.",
     images: [
-      "/projects/grid/grid.jpg",
-      "/projects/grid/grid.jpg",
-      "/projects/grid/grid.jpg",
+      "/projects/grid/grid2.jpg",
+      "/projects/grid/grid3.jpg",
+      "/projects/grid/grid4.jpg",
     ],
     techStack: [
       "React Native",
       "TypeScript",
-      "Next.js",
+      "Figma",
       "Supabase",
       "Expo",
-      "Tailwind CSS",
+      "Push Notifications",
     ],
     results: [
       { metric: "1000+", label: "Active users" },
       { metric: "500+", label: "Booked sessions" },
       { metric: "4.8★", label: "User rating" },
-    ],
-    nextProject: {
-      slug: "ulnaris",
-      title: "Ulnaris",
-      category: "Healthcare & CRM",
-    },
-  },
-  ulnaris: {
-    title: "Ulnaris",
-    subtitle: "Healthcare & CRM",
-    client: "Ulnaris Fizioterapija",
-    year: "2025",
-    services: ["Web Development", "UI/UX Design", "Cloud Infrastructure"],
-    launchType: "web",
-    websiteUrl: "#",
-    heroImage: "/projects/ulnaris/ulnaris-logo.jpg",
-    description:
-      "Modern web platform and CRM system for Ulnaris physiotherapy clinic, enabling easy appointment booking, patient management, and treatment records.",
-    challenge:
-      "The clinic needed a digital solution to facilitate the booking process, patient management, and treatment record keeping, with online access for patients.",
-    solution:
-      "We developed a complete web system with CRM functionalities, online booking, patient database, treatment history, and automatic notifications.",
-    images: [
-      "/projects/ulnaris/ulnaris-logo.jpg",
-      "/projects/ulnaris/ulnaris-logo.jpg",
-      "/projects/ulnaris/ulnaris-logo.jpg",
-    ],
-    techStack: [
-      "React",
-      "Node.js",
-      "Express",
-      "Figma",
-      "Vercel",
-      "Supabase",
-    ],
-    results: [
-      { metric: "400+", label: "Monthly appointments" },
-      { metric: "95%", label: "Patient satisfaction" },
-      { metric: "60%", label: "Reduced administrative work" },
     ],
     nextProject: {
       slug: "rad",
@@ -709,6 +703,11 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                       </svg>
                     </a>
                   )}
+                  {!project.appStoreUrl && !project.playStoreUrl && (
+                    <div className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gray-100 text-black rounded-full text-sm sm:text-base font-medium">
+                      Coming Soon
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -950,7 +949,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             Impact & results.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16">
-            {project.results.map((result: any, index: number) => (
+            {project.results.map((result: ProjectResult, index: number) => (
               <motion.div
                 key={index}
                 className="text-center"

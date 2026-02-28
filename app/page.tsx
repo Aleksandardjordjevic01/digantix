@@ -16,7 +16,7 @@ export default function Home() {
           title="Digital product design and technology partner"
           subtitle="Working alongside ambitious startups and enterprises to build scalable web, mobile, and cross-platform products — from concept to launch worldwide."
           ctaText="Let's discuss your project"
-          ctaHref="#contact"
+          ctaHref="/services#contact-section"
         />
         <AboutSection />
         {/* <ProjectsSection /> */}

@@ -116,16 +116,16 @@ export default function AboutUsPage() {
             transition={{ duration: 1.0, ease: "easeOut", delay: 0.45 }}
           >
             <div>
-              <div className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-4">150+</div>
+              <div className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-4">8</div>
               <p className="text-gray-400 text-sm sm:text-base">team members</p>
             </div>
             <div>
-              <div className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-4">500+</div>
+              <div className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-4">100+</div>
               <p className="text-gray-400 text-sm sm:text-base">completed projects</p>
             </div>
             <div>
-              <div className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-4">19 years</div>
-              <p className="text-gray-400 text-sm sm:text-base">in the business</p>
+              <div className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-4">10 years</div>
+              <p className="text-gray-400 text-sm sm:text-base">of experience</p>
             </div>
           </motion.div>
           </div>

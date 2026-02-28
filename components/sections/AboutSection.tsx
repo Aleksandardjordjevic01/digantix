@@ -12,7 +12,7 @@ interface AboutSectionProps {
 }
 
 export default function AboutSection({
-  title = "We are committed to finding innovative and unconventional solutions. Pushing boundaries to exceed client goals.",
+  title = "We focus on bold, inventive solutions that go beyond the expected. Constantly raising the bar to deliver more than our clients aim for.",
   subtitle = "Digantix doesn't do cookie-cutter solutions and we build products exactly as they were during the design phase, no short cuts or simplifications.",
   ctaText = "What we do",
   ctaHref = "#services",
@@ -20,18 +20,18 @@ export default function AboutSection({
   const industries = [
     "E-Learning",
     "Social Platforms",
-    "Fintech",
+    "CRM Systems",
     "Healthcare",
-    "Web3",
+    "AI Solutions",
     "Real Estate",
     "SaaS",
     "E-Commerce"
   ];
 
   const stats = [
-    { value: "150+", label: "team members" },
-    { value: "500+", label: "completed projects" },
-    { value: "19 years", label: "in the business" }
+    { value: "8", label: "team members" },
+    { value: "100+", label: "completed projects" },
+    { value: "10 years", label: "of experience" }
   ];
 
   return (
