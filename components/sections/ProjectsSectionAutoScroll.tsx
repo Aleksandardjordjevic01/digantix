@@ -32,7 +32,7 @@ const projects: Project[] = [
     id: 3,
     title: "Propus Photography",
     category: "Web Development",
-    image: "/projects/propus/propus-front.jpg",
+    image: "/projects/propus/propus4.jpg",
     link: "/projects/propus"
   },
   {
