@@ -138,7 +138,7 @@ export default function Footer({
   return (
     <footer className="relative bg-white py-12 sm:py-16 px-0 sm:px-6 lg:px-8">
       <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] mb-12 sm:mb-16" style={{ maxWidth: '1500px' }}>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start lg:items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-start lg:items-center">
           {/* Left Section - Contact Info */}
           <div className="space-y-6 sm:space-y-8">
             {/* Email & Phone */}
@@ -228,9 +228,13 @@ export default function Footer({
           </div>
 
           {/* Right Section - Navigation */}
-          <div className="flex justify-end">
-            <nav className="space-y-3 sm:space-y-4">
-              <a href="/about-us" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
+          <div className="lg:flex lg:justify-end">
+            <div>
+              <p className="text-[10px] sm:text-xs font-semibold tracking-wider text-gray-500 uppercase mb-3 sm:mb-4 lg:hidden">
+                MENU
+              </p>
+              <nav className="space-y-3 sm:space-y-4">
+                <a href="/about-us" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
                 About us
               </a>
               <a href="/services" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
@@ -239,7 +243,8 @@ export default function Footer({
               <a href="/projects" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
                 Projects
               </a>
-            </nav>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
