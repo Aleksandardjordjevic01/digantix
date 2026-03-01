@@ -98,22 +98,35 @@ Google će početi da indeksira tvoj sajt automatski.
 ✅ Internal linking
 ✅ Alt text na slikama
 
-## 📈 Analytics Setup (Opciono)
+## 📈 Analytics & Tracking Setup
 
-### Google Analytics 4
+### Google Tag Manager ✅ INSTALLED
+
+**Container ID:** GTM-5RJJW2Q4
+
+Google Tag Manager je već instaliran na sajtu! 
+
+**Sledeći koraci:**
+1. Idi na [Google Tag Manager](https://tagmanager.google.com/)
+2. Otvori kontejner **GTM-5RJJW2Q4**
+3. Dodaj Google Analytics 4 tag
+4. Publish promene
+
+**Detaljne instrukcije:** [GOOGLE-TAG-MANAGER.md](GOOGLE-TAG-MANAGER.md)
+
+### Google Analytics 4 (Dodaj kroz GTM)
+
+**Best practice:** Dodaj GA4 kroz GTM umesto direktno u kod
 
 1. Kreiraj GA4 property na [analytics.google.com](https://analytics.google.com)
-2. Instaliraj @next/third-parties:
-   ```bash
-   npm install @next/third-parties
-   ```
-3. Dodaj u `app/layout.tsx`:
-   ```typescript
-   import { GoogleAnalytics } from '@next/third-parties/google'
-   
-   // U body tag dodaj:
-   <GoogleAnalytics gaId="G-YOUR-ID" />
-   ```
+2. Dobićeš Measurement ID (npr. G-XXXXXXXXXX)
+3. U GTM dashboard-u, dodaj novi tag:
+   - Type: **Google Analytics: GA4 Configuration**  
+   - Measurement ID: tvoj G-ID
+   - Trigger: **All Pages**
+4. Publish u GTM-u
+
+Sve detalje vidi u: [GOOGLE-TAG-MANAGER.md](GOOGLE-TAG-MANAGER.md)
 
 ## 🔍 Monitoring
 
@@ -125,14 +138,18 @@ Nakon 2-3 dana, proveri u Google Search Console:
 
 ## 📝 Checklist
 
+- [x] Google Tag Manager instaliran (GTM-5RJJW2Q4)
 - [ ] Deploy sajt na production (Vercel)
 - [ ] Dodaj DNS TXT record kod domain provider-a
 - [ ] Sačekaj DNS propagaciju (30-60 min)
 - [ ] Verifikuj domen u Google Search Console
 - [ ] Submit sitemap u GSC: `https://digantix.com/sitemap.xml`
+- [ ] Dodaj GA4 tag u GTM dashboard
+- [ ] Publish GTM container
 - [ ] Testirati sve stranice sa PageSpeed Insights
 - [ ] Proveri da li se sve stranice indeksiraju (Site:digantix.com na Google-u)
-- [ ] Opciono: Setup Google Analytics
+- [ ] Opciono: Dodaj Facebook Pixel kroz GTM
+- [ ] Opciono: Setup Cookie Consent
 
 ## 🚀 Sledeći koraci za SEO
 
