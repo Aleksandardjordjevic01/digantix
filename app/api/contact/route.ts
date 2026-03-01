@@ -72,7 +72,6 @@ const buildEmailShell = ({
     <div style="max-width:640px;margin:0 auto;background:#ffffff;border:1px solid #e9e9ee;border-radius:16px;overflow:hidden;">
       <div style="background:#0b0b0f;padding:28px 28px 20px 28px;">
         <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:${ACCENT_COLOR};font-weight:700;">
-          DIGANTIX
         </div>
         ${logoUrl
           ? `<div style="margin-top:14px;"><img src="${escapeHtml(logoUrl)}" alt="Digantix" style="display:block;height:28px;width:auto;max-width:220px;" /></div>`

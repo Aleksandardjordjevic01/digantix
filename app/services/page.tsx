@@ -113,10 +113,12 @@ export default function ServicesPage() {
     "Site from scratch",
     "UX/UI design",
     "Product design",
-    "Webflow site",
-    "Motion design",
+    "Wordpress site",
+    "eCommerce website",
     "Branding",
     "Mobile development",
+    "CRM development",
+    "Custom solutions",
   ];
 
   const budgetOptions = ["1k-10k", "10-20k", "30-40k", "40-50k", "50-100k", ">100k"];

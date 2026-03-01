@@ -111,6 +111,14 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
                 {/* Main Links */}
                 <div className="space-y-6 mb-16">
                   <a
+                    href="/"
+                    className="block text-3xl sm:text-4xl font-light hover:text-[#C388F8] transition-colors duration-300"
+                    style={{ letterSpacing: -0.5 }}
+                    onClick={onClose}
+                  >
+                    Home
+                  </a>
+                  <a
                     href="/about-us"
                     className="block text-3xl sm:text-4xl font-light hover:text-[#C388F8] transition-colors duration-300"
                     style={{ letterSpacing: -0.5 }}
