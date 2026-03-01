@@ -130,8 +130,8 @@ const orbitingImagesData = [
 export default function Footer({
   email = "office@digantix.com",
   phone = "+381 64 148 2998",
-  mainOfficeAddress = "Knez Mihailova 10",
-  mainOfficeCity = "Belgrade, 11000",
+  mainOfficeAddress = "Lole Ribara 3",
+  mainOfficeCity = "Svilajnac 35210",
   secondOfficeAddress = "Innovation Hub",
   secondOfficeCity = "Novi Sad, 21000"
 }: FooterProps) {
@@ -170,7 +170,7 @@ export default function Footer({
                   {mainOfficeCity}
                 </p>
               </div>
-              <div>
+              {/* <div>
                 <p className="text-[10px] sm:text-xs font-semibold tracking-wider text-gray-500 uppercase mb-1.5 sm:mb-2">
                   SECOND OFFICE
                 </p>
@@ -180,7 +180,7 @@ export default function Footer({
                 <p className="text-sm sm:text-base text-black">
                   {secondOfficeCity}
                 </p>
-              </div>
+              </div>*/}
             </div>
           </div>
 
@@ -228,27 +228,16 @@ export default function Footer({
           </div>
 
           {/* Right Section - Navigation */}
-          <div className="grid grid-cols-2 gap-6 sm:gap-8">
+          <div className="flex justify-end">
             <nav className="space-y-3 sm:space-y-4">
+              <a href="/about-us" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
+                About us
+              </a>
               <a href="/services" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
                 Services
               </a>
               <a href="/projects" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
                 Projects
-              </a>
-              <a href="/company" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
-                Company
-              </a>
-            </nav>
-            <nav className="space-y-3 sm:space-y-4">
-              <a href="/blog" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
-                Blog
-              </a>
-              <a href="/workflow" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
-                Workflow
-              </a>
-              <a href="/contacts" className="block text-sm sm:text-base text-black hover:text-[#C388F8] transition-colors duration-300">
-                Contacts
               </a>
             </nav>
           </div>
@@ -261,16 +250,16 @@ export default function Footer({
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-gray-200">
           {/* Copyright */}
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-600">
-            <a href="/privacy" className="hover:text-black transition-colors duration-300">
+            <a href="/" className="hover:text-black transition-colors duration-300">
               Privacy Policy
             </a>
-            <span>2026, Digantix</span>
+            <span>© 2026 Digantix</span>
           </div>
 
           {/* Social Media Icons */}
           <div className="flex items-center gap-2 sm:gap-3">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/digantix" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C388F8] hover:text-white transition-all duration-300"
@@ -278,7 +267,7 @@ export default function Footer({
               <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/company/digantix" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C388F8] hover:text-white transition-all duration-300"
@@ -286,28 +275,12 @@ export default function Footer({
               <Linkedin className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
             <a 
-              href="https://github.com" 
+              href="https://github.com/Digantix" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C388F8] hover:text-white transition-all duration-300"
             >
               <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C388F8] hover:text-white transition-all duration-300"
-            >
-              <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-[#C388F8] hover:text-white transition-all duration-300"
-            >
-              <Twitter className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </a>
           </div>
         </div>

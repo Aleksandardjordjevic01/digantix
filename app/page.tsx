@@ -13,8 +13,8 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection
-          title="Digital product design and technology partner"
-          subtitle="Working alongside ambitious startups and enterprises to build scalable web, mobile, and cross-platform products — from concept to launch worldwide."
+          title="We turn bold ideas into products built to grow."
+          subtitle="From early-stage startups to scaling enterprises, we partner with ambitious teams to craft web, mobile, and cross-platform experiences — handling everything from concept through to worldwide delivery."
           ctaText="Let's discuss your project"
           ctaHref="/services#contact-section"
         />

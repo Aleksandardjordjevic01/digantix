@@ -41,7 +41,7 @@ export default function HeroSection({
 
           {/* Subtitle */}
           <motion.p 
-            className="text-lg sm:text-lg leading-relaxed mb-10 sm:mb-8 max-w-2xl font-light" 
+            className="text-lg sm:text-lg leading-relaxed mb-10 sm:mb-8 max-w-4xl font-light" 
             style={{ fontSize: 'clamp(16px, 2vw, 18px)' }}
             initial={{ 
               opacity: 0,

@@ -82,7 +82,7 @@ export default function AboutUsPage() {
             }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 0.15 }}
           >
-            We are <span className="text-[#C388F8]">Digantix</span>. A digital design and development company
+            We are <span className="text-[#C388F8]">Digantix</span>. A creative studio for the digital age.
           </motion.h1>
           
           {/* Description */}
@@ -98,8 +98,7 @@ export default function AboutUsPage() {
             }}
             transition={{ duration: 1.0, ease: "easeOut", delay: 0.3 }}
           >
-            We help our clients build their brand identity, and design, develop, launch, and support their 
-            digital products. Working with startups and enterprises from all over the world.
+            From brand identity to full-scale digital products — we design, build, and support what your business needs to grow. Trusted by startups and enterprises across the globe.
           </motion.p>
           
           {/* Statistics */}

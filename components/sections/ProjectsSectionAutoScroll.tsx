@@ -65,7 +65,7 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    title: "ID&COM",
+    title: "I&DCOM",
     category: "Service Management CRM",
     image: "/projects/idcom/i2.jpg",
     link: "/projects/idcom"

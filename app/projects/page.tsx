@@ -36,7 +36,7 @@ const projects: Project[] = [
     id: 3,
     title: "Propus Photography",
     category: "Web Development",
-    image: "/projects/propus/propus-front.jpg",
+    image: "/projects/propus/propus4.jpg",
     link: "/projects/propus",
     tags: ["featured", "web"]
   },
@@ -74,7 +74,7 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    title: "ID&COM",
+    title: "I&DCOM",
     category: "Service Management CRM",
     image: "/projects/idcom/i2.jpg",
     link: "/projects/idcom",

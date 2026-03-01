@@ -116,6 +116,21 @@ export default function RootLayout({
         </Script>
         {/* End Google Tag Manager */}
 
+        {/* Google Analytics (gtag.js) - ALTERNATIVA: Dodaj kroz GTM umesto direktno */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9EEE72B2RY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9EEE72B2RY');
+          `}
+        </Script>
+        {/* End Google Analytics */}
+
         {children}
       </body>
     </html>

@@ -12,39 +12,51 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Aleksandar Djordjevic",
-    role: "Creative Director",
-    image: "/avatars/Aleksandar-Djordjevic-Image.png"
+    name: "Stefan Mijajlović",
+    role: "CEO",
+    image: "/team/stefan-mijajlovic.png"
   },
   {
     id: 2,
-    name: "Aleksandar Veljkovic",
-    role: "Lead Developer",
-    image: "/avatars/Aleksandar-Veljkovic-Image.png"
+    name: "Aleksandar Đorđević",
+    role: "Co-founder",
+    image: "/team/aleksandar-djordjevic.png"
   },
   {
     id: 3,
-    name: "Branimir",
-    role: "UX Designer",
-    image: "/avatars/Branimir-Digantix.jpg"
+    name: "Luka Nešić",
+    role: "Co-founder & Mobile Developer",
+    image: "/team/nesic-luka.png"
   },
   {
     id: 4,
-    name: "Emir",
-    role: "Project Manager",
-    image: "/avatars/Emir-Digantix.jpg"
+    name: "Branimir Đorđević",
+    role: "Frontend Developer",
+    image: "/team/branimir-djordjevic.png"
   },
   {
     id: 5,
-    name: "Aca",
-    role: "Brand Strategist",
-    image: "/avatars/image-aca.png"
+    name: "Emir Lemeš",
+    role: "Backend Developer",
+    image: "/team/emir-lemes.png"
   },
   {
     id: 6,
-    name: "Stefan",
-    role: "Full Stack Developer",
-    image: "/avatars/stefan2 (1).png"
+    name: "Nikola Nikolić",
+    role: "Backend Developer",
+    image: "/team/nikola-nikolic.png"
+  },
+  {
+    id: 7,
+    name: "Aleksandar Veljković",
+    role: "Branding & UI/UX Designer",
+    image: "/team/aleksandar-veljkovic.png"
+  },
+  {
+    id: 8,
+    name: "Aleksandar Stojanović",
+    role: "Sales Manager",
+    image: "/team/aleksandar-stojanovic.png"
   }
 ];
 
@@ -62,7 +74,7 @@ export default function TeamCarousel() {
         </div>
 
         {/* Grid Layout - 4 po redu */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
           {teamMembers.map((member) => (
             <div
               key={member.id}
@@ -74,11 +86,11 @@ export default function TeamCarousel() {
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
 
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-white/60 opacity-0 group-hover:opacity-0 transition-opacity duration-300" />
               </div>
 
               {/* Content Below Image */}

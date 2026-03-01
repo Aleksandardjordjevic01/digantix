@@ -465,23 +465,23 @@ const projectsData: Record<string, ProjectData> = {
     ],
     nextProject: {
       slug: "idcom",
-      title: "ID&COM",
+      title: "I&DCOM",
       category: "Service Management CRM",
     },
   },
   idcom: {
-    title: "ID&COM",
+    title: "I&DCOM",
     subtitle: "Service Management CRM",
-    client: "ID&COM",
+    client: "I&DCOM",
     year: "2025",
     services: ["Web Development", "UI/UX Design", "Cloud Infrastructure", "Digital Strategy"],
     launchType: "web",
     websiteUrl: "#",
     heroImage: "/projects/idcom/i3.jpg",
     description:
-      "Specialized CRM system for managing service requests and tickets, developed for ID&COM company specializing in computer, monitor, printer, and hardware servicing. The system enables efficient tracking of malfunctions, service orders, and complete workflow from intake to problem resolution.",
+      "Specialized CRM system for managing service requests and tickets, developed for I&DCOM company specializing in computer, monitor, printer, and hardware servicing. The system enables efficient tracking of malfunctions, service orders, and complete workflow from intake to problem resolution.",
     challenge:
-      "ID&COM faced the challenge of managing a large number of daily service requests, requiring a centralized system for tracking tickets, malfunction history, assigned technicians, repair status, and client communication - all in one place with quick search and reporting capabilities.",
+      "I&DCOM faced the challenge of managing a large number of daily service requests, requiring a centralized system for tracking tickets, malfunction history, assigned technicians, repair status, and client communication - all in one place with quick search and reporting capabilities.",
     solution:
       "We developed a fully customized CRM system using React for responsive and intuitive frontend, Node.js and Express for backend with real processes, MongoDB for flexible database, with design created in Figma enabling quick ticket entry. The system includes a dashboard with statistics, notification system, repair status tracking, parts inventory, and automatic report generation.",
     images: [
