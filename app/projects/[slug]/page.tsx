@@ -389,7 +389,7 @@ const projectsData: Record<string, ProjectData> = {
   grid: {
     title: "Grid",
     subtitle: "Social Network & Booking",
-    client: "Digantix — Internal Product",
+    client: "Digantix - Internal Product",
     year: "2025",
     services: ["Mobile App", "UI/UX Design"],
     launchType: "mobile",
@@ -537,11 +537,11 @@ const projectsData: Record<string, ProjectData> = {
     websiteUrl: "https://majice.rs",
     heroImage: "/projects/majice/majice-logo.png",
     description:
-      "Complete redesign and development of Majice.rs — a custom clothing e-commerce platform specializing in personalized t-shirts and hoodies. Built entirely from scratch with no plugins or page builders, every feature is custom-engineered for performance and scale.",
+      "Complete redesign and development of Majice.rs - a custom clothing e-commerce platform specializing in personalized t-shirts and hoodies. Built entirely from scratch with no plugins or page builders, every feature is custom-engineered for performance and scale.",
     challenge:
-      "The existing platform was built on outdated technology with a rigid page builder that could not support the level of customization required — especially for the product configurator, courier integrations, and scalable database architecture. A clean rebuild was needed.",
+      "The existing platform was built on outdated technology with a rigid page builder that could not support the level of customization required - especially for the product configurator, courier integrations, and scalable database architecture. A clean rebuild was needed.",
     solution:
-      "We rebuilt the entire platform from the ground up using React and Node.js, with MySQL as the primary database. Key highlights include a fully custom product configurator/designer that lets users design their own t-shirts and hoodies in-browser, real-time order tracking integrated with local courier services, and a seamless database migration from the legacy system — with zero data loss.",
+      "We rebuilt the entire platform from the ground up using React and Node.js, with MySQL as the primary database. Key highlights include a fully custom product configurator/designer that lets users design their own t-shirts and hoodies in-browser, real-time order tracking integrated with local courier services, and a seamless database migration from the legacy system - with zero data loss.",
     images: [
       "/projects/majice/majicem1.jpg",
       "/projects/majice/majicem2.jpg",
@@ -569,11 +569,11 @@ const projectsData: Record<string, ProjectData> = {
     websiteUrl: "#",
     heroImage: "/projects/generator/hero.mp4",
     description:
-      "A generative 3D configurator built for Modular Houses — a product conceived jointly by Digantix and the client to solve a genuine design problem: the near-infinite number of valid ways to assemble modular units into a livable home.",
+      "A generative 3D configurator built for Modular Houses - a product conceived jointly by Digantix and the client to solve a genuine design problem: the near-infinite number of valid ways to assemble modular units into a livable home.",
     challenge:
-      "Modular construction creates a complex combinatorial problem. Modules can't be placed arbitrarily — every side has rules about which adjacent side it can connect to, and compositions must follow structural logic. With this many valid arrangements, static brochures and 2D floor plans broke down completely. Clients had no way to explore what their future home could actually look like.",
+      "Modular construction creates a complex combinatorial problem. Modules can't be placed arbitrarily - every side has rules about which adjacent side it can connect to, and compositions must follow structural logic. With this many valid arrangements, static brochures and 2D floor plans broke down completely. Clients had no way to explore what their future home could actually look like.",
     solution:
-      "We started with a layout engine: an algorithm seeded with a set of initial configurations stored in Supabase, which learns the rules of modular assembly and generates new valid arrangements from existing ones. Once the logic was proven in 2D, we moved into 3D. Each module was modeled as a single packed GLB file containing every possible element — roofs, door types, front and back facades — which the app unpacks and toggles per module on demand. The result is a fully interactive Three.js scene where clients can explore, configure, and export their design directly for further AI-assisted environment rendering.",
+      "We started with a layout engine: an algorithm seeded with a set of initial configurations stored in Supabase, which learns the rules of modular assembly and generates new valid arrangements from existing ones. Once the logic was proven in 2D, we moved into 3D. Each module was modeled as a single packed GLB file containing every possible element - roofs, door types, front and back facades - which the app unpacks and toggles per module on demand. The result is a fully interactive Three.js scene where clients can explore, configure, and export their design directly for further AI-assisted environment rendering.",
     images: [
       "/projects/generator/video1.mp4",
       "/projects/generator/video2.mp4",
@@ -601,11 +601,11 @@ const projectsData: Record<string, ProjectData> = {
     heroImage:
      "/projects/divine/divine8.jpg",
     description:
-      "Complete website redesign for Divine Park Hotel — a modern hospitality property seeking a premium digital presence. The project combined a full Next.js rebuild with strong SEO foundations and a professional on-site photography session to bring the property to life online.",
+      "Complete website redesign for Divine Park Hotel - a modern hospitality property seeking a premium digital presence. The project combined a full Next.js rebuild with strong SEO foundations and a professional on-site photography session to bring the property to life online.",
     challenge:
       "The hotel's existing website failed to reflect the quality of their property and was losing potential guests to competitors with stronger online profiles. Poor SEO visibility and outdated visuals meant the site was working against the brand rather than for it.",
     solution:
-      "We delivered a fully redesigned website built with Next.js, focused on speed, mobile experience, and search engine visibility. Alongside the development work, our team conducted a professional photography session on location — capturing the rooms, amenities, and surroundings — giving the entire site authentic, high-quality visuals that convert visitors into guests.",
+      "We delivered a fully redesigned website built with Next.js, focused on speed, mobile experience, and search engine visibility. Alongside the development work, our team conducted a professional photography session on location - capturing the rooms, amenities, and surroundings - giving the entire site authentic, high-quality visuals that convert visitors into guests.",
     images: [
       "/projects/divine/divine7.jpg",
       "/projects/divine/divine5.jpg",
@@ -633,11 +633,11 @@ const projectsData: Record<string, ProjectData> = {
     websiteUrl: "#",
     heroImage: "/projects/serwiss/serwiss3.jpg",
     description:
-      "A professional web presence for SerWiss Operations — a nearshore managed services firm founded by Natascha Maksimovic, bringing Swiss precision and over 20 years of international finance expertise to SMEs across the DACH region.",
+      "A professional web presence for SerWiss Operations - a nearshore managed services firm founded by Natascha Maksimovic, bringing Swiss precision and over 20 years of international finance expertise to SMEs across the DACH region.",
     challenge:
-      "SerWiss Operations needed a digital platform that conveyed the credibility of Swiss-quality standards while clearly communicating the commercial advantage of nearshoring from Serbia. The audience — senior decision-makers at SMEs — demands professionalism and clarity, not noise.",
+      "SerWiss Operations needed a digital platform that conveyed the credibility of Swiss-quality standards while clearly communicating the commercial advantage of nearshoring from Serbia. The audience - senior decision-makers at SMEs - demands professionalism and clarity, not noise.",
     solution:
-      "We designed and developed a focused, high-converting website in Next.js that leads with the founder's story and the firm's unique positioning: Swiss precision, Serbian operational talent, and a strategic collaboration with Salvioli AG and Comtrade Systems Integration. The site structures a complex service offering — financial operations, process optimization, nearshore delivery — into a clear and confident narrative.",
+      "We designed and developed a focused, high-converting website in Next.js that leads with the founder's story and the firm's unique positioning: Swiss precision, Serbian operational talent, and a strategic collaboration with Salvioli AG and Comtrade Systems Integration. The site structures a complex service offering - financial operations, process optimization, nearshore delivery - into a clear and confident narrative.",
     images: [
       "/projects/serwiss/serwiss2.jpg",
       "/projects/serwiss/serwiss1.jpg",
@@ -1198,7 +1198,7 @@ export default function ProjectPage({
           </div>
         )}
 
-        {/* Modular 3D — Process Steps + Feature */}
+        {/* Modular 3D - Process Steps + Feature */}
         {slug === "modular3d" && (
           <>
             {/* Editorial process section */}
@@ -1216,19 +1216,19 @@ export default function ProjectPage({
                     number: "01",
                     title: "Algorithm",
                     description:
-                      "We built a layout generation algorithm seeded with initial module configurations. It understands the rules of modular construction — which sides connect, how orientations work — and generates new valid arrangements from existing ones.",
+                      "We built a layout generation algorithm seeded with initial module configurations. It understands the rules of modular construction - which sides connect, how orientations work - and generates new valid arrangements from existing ones.",
                   },
                   {
                     number: "02",
                     title: "2D First",
                     description:
-                      "Before touching 3D, we validated the layout logic in 2D. Every generated floor plan is structurally sound — the right sides connect to the right sides, every time.",
+                      "Before touching 3D, we validated the layout logic in 2D. Every generated floor plan is structurally sound - the right sides connect to the right sides, every time.",
                   },
                   {
                     number: "03",
                     title: "3D Modeling",
                     description:
-                      "Each module was packed into a single GLB containing every possible element — roofs, doors, facades. The app unpacks and toggles components per module on demand, keeping the asset pipeline lean and fully flexible.",
+                      "Each module was packed into a single GLB containing every possible element - roofs, doors, facades. The app unpacks and toggles components per module on demand, keeping the asset pipeline lean and fully flexible.",
                   },
                   {
                     number: "04",
@@ -1266,7 +1266,7 @@ export default function ProjectPage({
                   Real-time 3D visualization.
                 </h2>
                 <p className="text-gray-500 font-light text-base sm:text-lg leading-relaxed">
-                  The layout engine doesn't just display pre-built designs — it
+                  The layout engine doesn't just display pre-built designs - it
                   generates them. Seeded with an initial set of valid
                   configurations and the rules of modular assembly, it produces
                   new arrangements on demand. Every floor plan is structurally
@@ -1276,7 +1276,7 @@ export default function ProjectPage({
               </div>
             </div>
 
-            {/* Light feature section — file generation */}
+            {/* Light feature section - file generation */}
             <div className="bg-gray-50 py-20 sm:py-28 lg:py-36 px-4 sm:px-6">
               <div
                 className="mx-auto w-full lg:w-[85%]"
@@ -1313,12 +1313,12 @@ export default function ProjectPage({
                     One file, every element.
                   </h2>
                   <p className="text-gray-500 font-light text-base sm:text-lg leading-relaxed">
-                    Each module is a single packed GLB — roof types, door
+                    Each module is a single packed GLB - roof types, door
                     variations, front and back facades all bundled inside. The
                     configurator unpacks and toggles each element individually,
                     so there's no library to maintain and no re-exports when
                     something changes. Add a glass roof, swap a facade, remove
-                    the doors — all live, all instant.
+                    the doors - all live, all instant.
                   </p>
                 </div>
 
@@ -1345,7 +1345,7 @@ export default function ProjectPage({
                     </span>
                   </div>
                   <p className="text-xs text-gray-400 font-light max-w-sm leading-relaxed">
-                    © {new Date().getFullYear()} — Proprietary work. Design,
+                    © {new Date().getFullYear()} - Proprietary work. Design,
                     technology, and all content may not be reproduced without
                     written permission.
                   </p>
