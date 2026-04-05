@@ -6,56 +6,95 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { LetsWorkTogether } from "@/components/ui/lets-work-section";
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  SiNextdotjs, SiReact, SiTypescript, SiFramer, SiSupabase, SiVercel, 
-  SiGreensock, SiFigma, SiAdobeaftereffects, SiThreedotjs, SiAdobe, 
-  SiShopify, SiStripe, SiApple, SiAndroid, SiFirebase, SiExpo, 
-  SiTwilio, SiStorybook, SiTailwindcss, SiWordpress, SiCloudinary, 
-  SiHubspot, SiGoogleanalytics, SiMeta, SiGoogleads, SiHtml5, 
-  SiInstagram, SiAdobecreativecloud, SiWix, SiExpress, SiNodedotjs, SiMongodb
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiFramer,
+  SiSupabase,
+  SiVercel,
+  SiGreensock,
+  SiFigma,
+  SiAdobeaftereffects,
+  SiThreedotjs,
+  SiAdobe,
+  SiShopify,
+  SiStripe,
+  SiApple,
+  SiAndroid,
+  SiFirebase,
+  SiExpo,
+  SiTwilio,
+  SiStorybook,
+  SiTailwindcss,
+  SiWordpress,
+  SiCloudinary,
+  SiHubspot,
+  SiGoogleanalytics,
+  SiMeta,
+  SiGoogleads,
+  SiHtml5,
+  SiInstagram,
+  SiAdobecreativecloud,
+  SiWix,
+  SiExpress,
+  SiNodedotjs,
+  SiMongodb,
+  SiMysql,
 } from "react-icons/si";
 import { IconType } from "react-icons";
-import { Shield, Globe, Palette, BarChart3, Users, Sparkles, Target, Smartphone, Search } from "lucide-react";
+import {
+  Shield,
+  Globe,
+  Palette,
+  BarChart3,
+  Users,
+  Sparkles,
+  Target,
+  Smartphone,
+  Search,
+} from "lucide-react";
 
 // Tech Stack icon mapping
 const getTechIcon = (tech: string): IconType | null => {
   const iconMap: { [key: string]: IconType } = {
     "Next.js": SiNextdotjs,
-    "React": SiReact,
+    React: SiReact,
     "React Native": SiReact,
-    "TypeScript": SiTypescript,
+    TypeScript: SiTypescript,
     "Framer Motion": SiFramer,
-    "Supabase": SiSupabase,
-    "Vercel": SiVercel,
-    "GSAP": SiGreensock,
-    "Figma": SiFigma,
+    Supabase: SiSupabase,
+    Vercel: SiVercel,
+    GSAP: SiGreensock,
+    Figma: SiFigma,
     "After Effects": SiAdobeaftereffects,
     "Three.js": SiThreedotjs,
     "Adobe Creative Suite": SiAdobecreativecloud,
-    "Shopify": SiShopify,
-    "Stripe": SiStripe,
-    "iOS": SiApple,
-    "Android": SiAndroid,
-    "Firebase": SiFirebase,
-    "Expo": SiExpo,
+    Shopify: SiShopify,
+    Stripe: SiStripe,
+    iOS: SiApple,
+    Android: SiAndroid,
+    Firebase: SiFirebase,
+    Expo: SiExpo,
     "Push Notifications": SiExpo,
-    "Twilio": SiTwilio,
-    "Storybook": SiStorybook,
+    Twilio: SiTwilio,
+    Storybook: SiStorybook,
     "Design Tokens": SiFigma,
     "Tailwind CSS": SiTailwindcss,
-    "WordPress": SiWordpress,
-    "Cloudinary": SiCloudinary,
-    "HubSpot": SiHubspot,
+    WordPress: SiWordpress,
+    Cloudinary: SiCloudinary,
+    HubSpot: SiHubspot,
     "Google Analytics": SiGoogleanalytics,
     "Meta Ads": SiMeta,
     "Google Ads": SiGoogleads,
-    "Wix": SiWix,
+    Wix: SiWix,
     "Wix CMS": SiWix,
-    "ContextAPI": SiReact,
+    ContextAPI: SiReact,
     "Adobe Photoshop": SiAdobecreativecloud,
-    "Express": SiExpress,
+    Express: SiExpress,
     "Node.js": SiNodedotjs,
-    "MongoDB": SiMongodb,
+    MongoDB: SiMongodb,
+    MySQL: SiMysql,
   };
   return iconMap[tech] || null;
 };
@@ -64,41 +103,42 @@ const getTechIcon = (tech: string): IconType | null => {
 const getTechColor = (tech: string): string => {
   const colorMap: { [key: string]: string } = {
     "Next.js": "#000000",
-    "React": "#61DAFB",
+    React: "#61DAFB",
     "React Native": "#61DAFB",
-    "TypeScript": "#3178C6",
+    TypeScript: "#3178C6",
     "Framer Motion": "#0055FF",
-    "Supabase": "#3ECF8E",
-    "Vercel": "#000000",
-    "GSAP": "#88CE02",
-    "Figma": "#F24E1E",
+    Supabase: "#3ECF8E",
+    Vercel: "#000000",
+    GSAP: "#88CE02",
+    Figma: "#F24E1E",
     "After Effects": "#9999FF",
     "Three.js": "#000000",
     "Adobe Creative Suite": "#FF0000",
-    "Shopify": "#96BF48",
-    "Stripe": "#635BFF",
-    "iOS": "#000000",
-    "Android": "#3DDC84",
-    "Firebase": "#FFCA28",
-    "Expo": "#000020",
+    Shopify: "#96BF48",
+    Stripe: "#635BFF",
+    iOS: "#000000",
+    Android: "#3DDC84",
+    Firebase: "#FFCA28",
+    Expo: "#000020",
     "Push Notifications": "#000020",
-    "Twilio": "#F22F46",
-    "Storybook": "#FF4785",
+    Twilio: "#F22F46",
+    Storybook: "#FF4785",
     "Design Tokens": "#F24E1E",
     "Tailwind CSS": "#06B6D4",
-    "WordPress": "#21759B",
-    "Cloudinary": "#3448C5",
-    "HubSpot": "#FF7A59",
+    WordPress: "#21759B",
+    Cloudinary: "#3448C5",
+    HubSpot: "#FF7A59",
     "Google Analytics": "#E37400",
     "Meta Ads": "#0081FB",
     "Google Ads": "#4285F4",
-    "Wix": "#0C6EFC",
+    Wix: "#0C6EFC",
     "Wix CMS": "#0C6EFC",
-    "ContextAPI": "#61DAFB",
+    ContextAPI: "#61DAFB",
     "Adobe Photoshop": "#31A8FF",
-    "Express": "#000000",
+    Express: "#000000",
     "Node.js": "#339933",
-    "MongoDB": "#47A248",
+    MongoDB: "#47A248",
+    MySQL: "#4479A1",
   };
   return colorMap[tech] || "#000000";
 };
@@ -109,7 +149,7 @@ const getServiceIcon = (service: string): IconType | null => {
     "Web Development": SiHtml5,
     "UI/UX Design": SiFigma,
     "Brand Strategy": Target,
-    "Branding": SiAdobe,
+    Branding: SiAdobe,
     "Motion Design": SiAdobeaftereffects,
     "Digital Strategy": BarChart3,
     "E-commerce": SiShopify,
@@ -121,30 +161,30 @@ const getServiceIcon = (service: string): IconType | null => {
     "Design System": SiStorybook,
     "Web Design": SiFigma,
     "Content Strategy": Palette,
-    "Marketing": SiGoogleads,
+    Marketing: SiGoogleads,
     "Mobile App": Smartphone,
     "Cloud Infrastructure": Globe,
     "Digital Marketing": SiMeta,
     "Social Media": SiInstagram,
     "Content Creation": Palette,
-    "SEO": Search,
-    "Responsive": Smartphone,
-    "Photography": Palette,
+    SEO: Search,
+    Responsive: Smartphone,
+    Photography: Palette,
   };
   return iconMap[service] || null;
 };
 
 // Parallax Image Component
-const ParallaxImage = ({ 
-  src, 
-  alt, 
-  className = "", 
+const ParallaxImage = ({
+  src,
+  alt,
+  className = "",
   containerClassName = "",
   style = {},
-  priority = false
-}: { 
-  src: string; 
-  alt: string; 
+  priority = false,
+}: {
+  src: string;
+  alt: string;
   className?: string;
   containerClassName?: string;
   style?: React.CSSProperties;
@@ -153,9 +193,9 @@ const ParallaxImage = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
-  
+
   const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
 
   return (
@@ -226,11 +266,7 @@ const projectsData: Record<string, ProjectData> = {
       "/projects/propus/propus3.jpg",
       "/projects/propus/propus4.jpg",
     ],
-    techStack: [
-      "WordPress",
-      "Figma",
-      "Adobe Photoshop",
-    ],
+    techStack: ["WordPress", "Figma", "Adobe Photoshop"],
     results: [
       { metric: "300%", label: "Increase in inquiries" },
       { metric: "95%", label: "Client satisfaction" },
@@ -262,10 +298,7 @@ const projectsData: Record<string, ProjectData> = {
       "/projects/modular/mod1.JPG",
       "/projects/modular/plan2.svg",
     ],
-    techStack: [
-      "WordPress",
-      "Figma",
-    ],
+    techStack: ["WordPress", "Figma"],
     results: [
       { metric: "200%", label: "Increase in inquiries" },
       { metric: "85%", label: "User engagement rate" },
@@ -282,7 +315,12 @@ const projectsData: Record<string, ProjectData> = {
     subtitle: "CRM System",
     client: "Modular Houses",
     year: "2025",
-    services: ["Web Development", "UI/UX Design", "Cloud Infrastructure", "Digital Strategy"],
+    services: [
+      "Web Development",
+      "UI/UX Design",
+      "Cloud Infrastructure",
+      "Digital Strategy",
+    ],
     launchType: "web",
     websiteUrl: "#",
     heroImage: "/projects/modularcrm/modu3.jpg",
@@ -297,13 +335,7 @@ const projectsData: Record<string, ProjectData> = {
 
       "/projects/modularcrm/modu1.jpg",
     ],
-    techStack: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Figma",
-    ],
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Figma"],
     results: [
       { metric: "65%", label: "Faster sales process" },
       { metric: "90%", label: "Better project organization" },
@@ -414,12 +446,7 @@ const projectsData: Record<string, ProjectData> = {
       "/projects/rad/rad3.jpg",
       "/projects/rad/rad4.jpg",
     ],
-    techStack: [
-      "WordPress",
-      "Figma",
-      "Adobe Photoshop",
-      "Google Analytics",
-    ],
+    techStack: ["WordPress", "Figma", "Adobe Photoshop", "Google Analytics"],
     results: [
       { metric: "180%", label: "Increase in inquiries" },
       { metric: "90%", label: "Client satisfaction" },
@@ -451,13 +478,7 @@ const projectsData: Record<string, ProjectData> = {
       "/projects/axon/axon3.jpg",
       "/projects/axon/axon4.jpg",
     ],
-    techStack: [
-      "Next.js",
-      "MongoDB",
-      "Node.js",
-      "Figma",
-      "TypeScript",
-    ],
+    techStack: ["Next.js", "MongoDB", "Node.js", "Figma", "TypeScript"],
     results: [
       { metric: "70%", label: "Faster data entry" },
       { metric: "100%", label: "Client satisfaction" },
@@ -474,7 +495,12 @@ const projectsData: Record<string, ProjectData> = {
     subtitle: "Service Management CRM",
     client: "I&DCOM",
     year: "2025",
-    services: ["Web Development", "UI/UX Design", "Cloud Infrastructure", "Digital Strategy"],
+    services: [
+      "Web Development",
+      "UI/UX Design",
+      "Cloud Infrastructure",
+      "Digital Strategy",
+    ],
     launchType: "web",
     websiteUrl: "#",
     heroImage: "/projects/idcom/i3.jpg",
@@ -489,17 +515,139 @@ const projectsData: Record<string, ProjectData> = {
       "/projects/idcom/i2.jpg",
       "/projects/idcom/i4.jpg",
     ],
-    techStack: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Figma",
-    ],
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Figma"],
     results: [
       { metric: "80%", label: "Faster ticket resolution" },
       { metric: "95%", label: "Better service work organization" },
       { metric: "200+", label: "Monthly tickets" },
+    ],
+    nextProject: {
+      slug: "majice",
+      title: "Majice.rs",
+      category: "E-commerce Platform",
+    },
+  },
+  majice: {
+    title: "Majice.rs",
+    subtitle: "E-commerce Platform",
+    client: "Majice.rs",
+    year: "2025",
+    services: ["Web Development", "UI/UX Design", "SEO", "E-commerce"],
+    launchType: "web",
+    websiteUrl: "https://majice.rs",
+    heroImage: "/projects/majice/majice-logo.png",
+    description:
+      "Complete redesign and development of Majice.rs — a custom clothing e-commerce platform specializing in personalized t-shirts and hoodies. Built entirely from scratch with no plugins or page builders, every feature is custom-engineered for performance and scale.",
+    challenge:
+      "The existing platform was built on outdated technology with a rigid page builder that could not support the level of customization required — especially for the product configurator, courier integrations, and scalable database architecture. A clean rebuild was needed.",
+    solution:
+      "We rebuilt the entire platform from the ground up using React and Node.js, with MySQL as the primary database. Key highlights include a fully custom product configurator/designer that lets users design their own t-shirts and hoodies in-browser, real-time order tracking integrated with local courier services, and a seamless database migration from the legacy system — with zero data loss.",
+    images: [
+      "/projects/majice/majicem1.jpg",
+      "/projects/majice/majicem2.jpg",
+      "/projects/majice/majicem4.jpg",
+    ],
+    techStack: ["React", "Node.js", "MySQL"],
+    results: [
+      { metric: "100%", label: "Custom-built, zero plugins" },
+      { metric: "40%", label: "Faster page load vs. old platform" },
+      { metric: "3x", label: "More product configurations" },
+    ],
+    nextProject: {
+      slug: "modular3d",
+      title: "Modular Houses 3D Generator",
+      category: "Web Application",
+    },
+  },
+  modular3d: {
+    title: "Modular Houses 3D Generator",
+    subtitle: "Web Application",
+    client: "Modular Houses",
+    year: "2026",
+    services: ["Web Development", "UI/UX Design", "Product Strategy"],
+    launchType: "web",
+    websiteUrl: "#",
+    heroImage: "/projects/generator/hero.mp4",
+    description:
+      "A generative 3D configurator built for Modular Houses — a product conceived jointly by Digantix and the client to solve a genuine design problem: the near-infinite number of valid ways to assemble modular units into a livable home.",
+    challenge:
+      "Modular construction creates a complex combinatorial problem. Modules can't be placed arbitrarily — every side has rules about which adjacent side it can connect to, and compositions must follow structural logic. With this many valid arrangements, static brochures and 2D floor plans broke down completely. Clients had no way to explore what their future home could actually look like.",
+    solution:
+      "We started with a layout engine: an algorithm seeded with a set of initial configurations stored in Supabase, which learns the rules of modular assembly and generates new valid arrangements from existing ones. Once the logic was proven in 2D, we moved into 3D. Each module was modeled as a single packed GLB file containing every possible element — roofs, door types, front and back facades — which the app unpacks and toggles per module on demand. The result is a fully interactive Three.js scene where clients can explore, configure, and export their design directly for further AI-assisted environment rendering.",
+    images: [
+      "/projects/generator/video1.mp4",
+      "/projects/generator/video2.mp4",
+    ],
+    techStack: ["Next.js", "Supabase", "Three.js", "TypeScript", "Figma"],
+    results: [
+      { metric: "Real-time", label: "3D visualization" },
+      { metric: "100+", label: "Possible module combinations" },
+      { metric: "60%", label: "Increase in client engagement" },
+    ],
+    nextProject: {
+      slug: "divinehotel",
+      title: "Divine Park Hotel",
+      category: "Web Design & Development",
+    },
+  },
+  divinehotel: {
+    title: "Divine Park Hotel",
+    subtitle: "Web Design & Development",
+    client: "Divine Park Hotel",
+    year: "2026",
+    services: ["Web Development", "UI/UX Design", "SEO", "Photography"],
+    launchType: "web",
+    websiteUrl: "https://www.divinepark.rs/",
+    heroImage:
+     "/projects/divine/divine8.jpg",
+    description:
+      "Complete website redesign for Divine Park Hotel — a modern hospitality property seeking a premium digital presence. The project combined a full Next.js rebuild with strong SEO foundations and a professional on-site photography session to bring the property to life online.",
+    challenge:
+      "The hotel's existing website failed to reflect the quality of their property and was losing potential guests to competitors with stronger online profiles. Poor SEO visibility and outdated visuals meant the site was working against the brand rather than for it.",
+    solution:
+      "We delivered a fully redesigned website built with Next.js, focused on speed, mobile experience, and search engine visibility. Alongside the development work, our team conducted a professional photography session on location — capturing the rooms, amenities, and surroundings — giving the entire site authentic, high-quality visuals that convert visitors into guests.",
+    images: [
+      "/projects/divine/divine7.jpg",
+      "/projects/divine/divine5.jpg",
+      "/projects/divine/divine6.jpg",
+    ],
+    techStack: ["Next.js", "Figma", "Tailwind CSS", "Google Analytics"],
+    results: [
+      { metric: "3x", label: "More direct bookings" },
+      { metric: "Top 3", label: "Local search ranking" },
+      { metric: "100%", label: "Professional photography" },
+    ],
+    nextProject: {
+      slug: "serwiss",
+      title: "SerWiss Operations",
+      category: "Web Development",
+    },
+  },
+  serwiss: {
+    title: "SerWiss Operations",
+    subtitle: "Web Development",
+    client: "SerWiss Operations",
+    year: "2026",
+    services: ["Web Development", "UI/UX Design", "Digital Strategy"],
+    launchType: "web",
+    websiteUrl: "#",
+    heroImage: "/projects/serwiss/serwiss3.jpg",
+    description:
+      "A professional web presence for SerWiss Operations — a nearshore managed services firm founded by Natascha Maksimovic, bringing Swiss precision and over 20 years of international finance expertise to SMEs across the DACH region.",
+    challenge:
+      "SerWiss Operations needed a digital platform that conveyed the credibility of Swiss-quality standards while clearly communicating the commercial advantage of nearshoring from Serbia. The audience — senior decision-makers at SMEs — demands professionalism and clarity, not noise.",
+    solution:
+      "We designed and developed a focused, high-converting website in Next.js that leads with the founder's story and the firm's unique positioning: Swiss precision, Serbian operational talent, and a strategic collaboration with Salvioli AG and Comtrade Systems Integration. The site structures a complex service offering — financial operations, process optimization, nearshore delivery — into a clear and confident narrative.",
+    images: [
+      "/projects/serwiss/serwiss2.jpg",
+      "/projects/serwiss/serwiss1.jpg",
+      "/projects/serwiss/serwiss4.jpg",
+    ],
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Figma"],
+    results: [
+      { metric: "3", label: "Strategic partners united" },
+      { metric: "DACH", label: "Target market" },
+      { metric: "20+", label: "Years of founder expertise" },
     ],
     nextProject: {
       slug: "propus",
@@ -509,11 +657,22 @@ const projectsData: Record<string, ProjectData> = {
   },
 };
 
-export default function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+export default function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = use(params);
   const [isDark, setIsDark] = useState(false);
   const project = projectsData[slug] || projectsData.propus;
-  const websiteEnabledSlugs = ["modular", "alexzlatara", "propus", "rad"];
+  const websiteEnabledSlugs = [
+    "modular",
+    "alexzlatara",
+    "propus",
+    "rad",
+    "majice",
+    "divinehotel",
+  ];
   const showWebsiteCta =
     websiteEnabledSlugs.includes(slug) &&
     project.launchType === "web" &&
@@ -542,7 +701,10 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] pt-24 sm:pt-32 pb-12 sm:pb-16" style={{ maxWidth: "1500px" }}>
+        <div
+          className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] pt-24 sm:pt-32 pb-12 sm:pb-16"
+          style={{ maxWidth: "1500px" }}
+        >
           <motion.p
             className="text-gray-400 text-xs sm:text-sm mb-4 sm:mb-6"
             initial={{ opacity: 0, clipPath: "inset(0 0 0 100%)" }}
@@ -574,34 +736,66 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           {/* Hero Image */}
           <motion.div
             className="relative w-full h-64 sm:h-96 lg:h-125 xl:h-150 rounded-xl sm:rounded-2xl overflow-hidden"
-            style={project.heroImage.endsWith('.svg') ? { backgroundColor: '#0a0a0a' } : {}}
+            style={
+              project.heroImage.endsWith(".svg")
+                ? { backgroundColor: "#0a0a0a" }
+                : {}
+            }
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            <ParallaxImage
-              src={project.heroImage}
-              alt={project.title}
-              className={project.heroImage.endsWith('.svg') ? 'object-contain p-12 sm:p-16 lg:p-24' : 'object-cover'}
-              containerClassName="relative w-full h-full"
-              priority={true}
-            />
+            {slug === "modular3d" ? (
+              <video
+                src={project.heroImage}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <ParallaxImage
+                src={project.heroImage}
+                alt={project.title}
+                className={
+                  project.heroImage.endsWith(".svg")
+                    ? "object-contain p-12 sm:p-16 lg:p-24"
+                    : "object-cover"
+                }
+                containerClassName="relative w-full h-full"
+                priority={true}
+              />
+            )}
           </motion.div>
         </div>
 
         {/* Project Info Grid */}
-        <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-16 lg:py-24" style={{ maxWidth: "1500px" }}>
+        <div
+          className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-16 lg:py-24"
+          style={{ maxWidth: "1500px" }}
+        >
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-16">
             <div>
-              <p className="text-sm sm:text-sm xl:text-base text-gray-400 mb-3 sm:mb-3">CLIENT</p>
-              <p className="text-xl sm:text-lg lg:text-xl xl:text-2xl text-black font-semibold">{project.client}</p>
+              <p className="text-sm sm:text-sm xl:text-base text-gray-400 mb-3 sm:mb-3">
+                CLIENT
+              </p>
+              <p className="text-xl sm:text-lg lg:text-xl xl:text-2xl text-black font-semibold">
+                {project.client}
+              </p>
             </div>
             <div>
-              <p className="text-sm sm:text-sm xl:text-base text-gray-400 mb-3 sm:mb-3">YEAR</p>
-              <p className="text-xl sm:text-lg lg:text-xl xl:text-2xl text-black font-light">{project.year}</p>
+              <p className="text-sm sm:text-sm xl:text-base text-gray-400 mb-3 sm:mb-3">
+                YEAR
+              </p>
+              <p className="text-xl sm:text-lg lg:text-xl xl:text-2xl text-black font-light">
+                {project.year}
+              </p>
             </div>
             <div className="col-span-2">
-              <p className="text-sm sm:text-sm xl:text-base text-gray-400 mb-4 sm:mb-3">SERVICES</p>
+              <p className="text-sm sm:text-sm xl:text-base text-gray-400 mb-4 sm:mb-3">
+                SERVICES
+              </p>
               <div className="flex flex-wrap gap-3 sm:gap-2">
                 {project.services.map((service: string, index: number) => {
                   const Icon = getServiceIcon(service);
@@ -623,9 +817,14 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
         {/* Temporary launch CTA setup: keep only website button for selected web projects.
             App Store / Play Store buttons are intentionally disabled for now and will be added later. */}
         {showWebsiteCta && (
-          <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-8 sm:py-12" style={{ maxWidth: "1500px" }}>
+          <div
+            className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-8 sm:py-12"
+            style={{ maxWidth: "1500px" }}
+          >
             <div className="border-t border-gray-200 pt-8 sm:pt-12">
-              <p className="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6 uppercase tracking-wider">View Live Project</p>
+              <p className="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6 uppercase tracking-wider">
+                View Live Project
+              </p>
 
               <a
                 href={project.websiteUrl}
@@ -633,12 +832,32 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-full hover:bg-[#C388F8] transition-all duration-300 text-sm sm:text-base font-medium"
               >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                  />
                 </svg>
                 Visit Website
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </a>
             </div>
@@ -646,7 +865,10 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
         )}
 
         {/* Challenge & Solution Section */}
-        <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-24 lg:py-32" style={{ maxWidth: "1500px" }}>
+        <div
+          className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-24 lg:py-32"
+          style={{ maxWidth: "1500px" }}
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left Side - Sticky Content */}
             <div className="lg:sticky lg:top-32 h-fit">
@@ -656,9 +878,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
               >
                 The challenge.
               </h2>
-              <p
-                className="text-gray-600 font-light leading-relaxed text-sm sm:text-base lg:text-lg"
-              >
+              <p className="text-gray-600 font-light leading-relaxed text-sm sm:text-base lg:text-lg">
                 {project.challenge}
               </p>
             </div>
@@ -671,15 +891,15 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
               >
                 Our solution.
               </h3>
-              <p
-                className="text-gray-600 font-light leading-relaxed mb-8 sm:mb-12 text-sm sm:text-base lg:text-lg"
-              >
+              <p className="text-gray-600 font-light leading-relaxed mb-8 sm:mb-12 text-sm sm:text-base lg:text-lg">
                 {project.solution}
               </p>
 
               {/* Tech Stack */}
               <div className="mt-12 sm:mt-16">
-                <p className="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6">TECHNOLOGY STACK</p>
+                <p className="text-xs sm:text-sm text-gray-400 mb-4 sm:mb-6">
+                  TECHNOLOGY STACK
+                </p>
                 <div className="flex flex-wrap gap-3">
                   {project.techStack.map((tech: string, index: number) => {
                     const Icon = getTechIcon(tech);
@@ -701,213 +921,450 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
         </div>
 
         {/* Image Gallery */}
-        <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-12 sm:py-16" style={{ maxWidth: "1500px" }}>
-          <div className="space-y-6 sm:space-y-8">
-            {project.images.map((image: string, index: number) => {
-              // Special layout for first image in modular project
-              if (slug === 'modular' && index === 0) {
+        {slug !== "modular3d" && (
+          <div
+            className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-12 sm:py-16"
+            style={{ maxWidth: "1500px" }}
+          >
+            <div className="space-y-6 sm:space-y-8">
+              {project.images.map((image: string, index: number) => {
+                // Special layout for first image in modular project
+                if (slug === "modular" && index === 0) {
+                  return (
+                    <motion.div
+                      key={index}
+                      className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden"
+                      style={{ backgroundColor: "#1a1a1a" }}
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+                        {/* Left side - Text content */}
+                        <div className="lg:col-span-2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                          <h2 className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold mb-6 sm:mb-8">
+                            MODULAR UNIT
+                            <br />
+                            <span className="font-black">FOREST</span>
+                          </h2>
+
+                          {/* Dimensions */}
+                          <div className="flex items-start gap-3 mb-4">
+                            <div className="shrink-0 w-8 h-8 flex items-center justify-center">
+                              <svg
+                                className="w-7 h-7 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M4 6h16M4 12h16M4 18h16"
+                                />
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M6 6v12M18 6v12"
+                                />
+                              </svg>
+                            </div>
+                            <div className="text-white">
+                              <p className="text-base sm:text-lg">
+                                Dimensions{" "}
+                                <span className="font-bold">12.10 x 5.00</span>{" "}
+                                m
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Area */}
+                          <div className="flex items-start gap-3 mb-6 sm:mb-8">
+                            <div className="shrink-0 w-8 h-8 flex items-center justify-center">
+                              <svg
+                                className="w-7 h-7 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                                />
+                              </svg>
+                            </div>
+                            <div className="text-white">
+                              <p className="text-base sm:text-lg">
+                                Total area{" "}
+                                <span className="font-bold">60.5</span> m²
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-white text-sm sm:text-base leading-relaxed">
+                            Designed as an ideal solution for modern lifestyle –
+                            mobile, energy-efficient, and aesthetically
+                            exceptional.
+                          </p>
+                        </div>
+
+                        {/* Right side - Floor plan */}
+                        <div className="lg:col-span-3 relative h-64 sm:h-96 lg:h-150 flex items-center justify-center p-6 lg:p-8">
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={image}
+                              alt="Modular House Floor Plan"
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                }
+
+                // Special layout for third image in modular project (LEAF)
+                if (slug === "modular" && index === 2) {
+                  return (
+                    <motion.div
+                      key={index}
+                      className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden"
+                      style={{ backgroundColor: "#1a1a1a" }}
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+                        {/* Left side - Text content */}
+                        <div className="lg:col-span-2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                          <h2 className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold mb-6 sm:mb-8">
+                            MODULAR UNIT
+                            <br />
+                            <span className="font-black">LEAF</span>
+                          </h2>
+
+                          {/* Dimensions */}
+                          <div className="flex items-start gap-3 mb-4">
+                            <div className="shrink-0 w-8 h-8 flex items-center justify-center">
+                              <svg
+                                className="w-7 h-7 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M4 6h16M4 12h16M4 18h16"
+                                />
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M6 6v12M18 6v12"
+                                />
+                              </svg>
+                            </div>
+                            <div className="text-white">
+                              <p className="text-base sm:text-lg">
+                                Dimensions{" "}
+                                <span className="font-bold">5.5 x 3.75</span> m
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Area */}
+                          <div className="flex items-start gap-3 mb-6 sm:mb-8">
+                            <div className="shrink-0 w-8 h-8 flex items-center justify-center">
+                              <svg
+                                className="w-7 h-7 text-white"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                                />
+                              </svg>
+                            </div>
+                            <div className="text-white">
+                              <p className="text-base sm:text-lg">
+                                Total area{" "}
+                                <span className="font-bold">20.5</span> m²
+                              </p>
+                            </div>
+                          </div>
+
+                          {/* Description */}
+                          <p className="text-white text-sm sm:text-base leading-relaxed">
+                            Designed as an ideal solution for modern lifestyle –
+                            mobile, energy-efficient, and aesthetically
+                            exceptional.
+                          </p>
+                        </div>
+
+                        {/* Right side - Floor plan */}
+                        <div className="lg:col-span-3 relative h-64 sm:h-96 lg:h-150 flex items-center justify-center p-6 lg:p-8">
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={image}
+                              alt="Modular House Floor Plan LEAF"
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                }
+
+                // Regular image display for other images
                 return (
                   <motion.div
                     key={index}
-                    className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden"
-                    style={{ backgroundColor: '#1a1a1a' }}
+                    className="relative w-full h-64 sm:h-96 md:h-125 lg:h-150 xl:h-175 rounded-xl sm:rounded-2xl overflow-hidden"
+                    style={
+                      image.endsWith(".svg")
+                        ? { backgroundColor: "#0a0a0a" }
+                        : {}
+                    }
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
                   >
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-                      {/* Left side - Text content */}
-                      <div className="lg:col-span-2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
-                        <h2 className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold mb-6 sm:mb-8">
-                          MODULAR UNIT<br />
-                          <span className="font-black">FOREST</span>
-                        </h2>
-
-                        {/* Dimensions */}
-                        <div className="flex items-start gap-3 mb-4">
-                          <div className="shrink-0 w-8 h-8 flex items-center justify-center">
-                            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 6v12M18 6v12" />
-                            </svg>
-                          </div>
-                          <div className="text-white">
-                            <p className="text-base sm:text-lg">
-                              Dimensions <span className="font-bold">12.10 x 5.00</span> m
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Area */}
-                        <div className="flex items-start gap-3 mb-6 sm:mb-8">
-                          <div className="shrink-0 w-8 h-8 flex items-center justify-center">
-                            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
-                          </div>
-                          <div className="text-white">
-                            <p className="text-base sm:text-lg">
-                              Total area <span className="font-bold">60.5</span> m²
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Description */}
-                        <p className="text-white text-sm sm:text-base leading-relaxed">
-                          Designed as an ideal solution for modern lifestyle – mobile, 
-                          energy-efficient, and aesthetically exceptional.
-                        </p>
-                      </div>
-
-                      {/* Right side - Floor plan */}
-                      <div className="lg:col-span-3 relative h-64 sm:h-96 lg:h-150 flex items-center justify-center p-6 lg:p-8">
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={image}
-                            alt="Modular House Floor Plan"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    <ParallaxImage
+                      src={image}
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      className={
+                        image.endsWith(".svg")
+                          ? "object-contain p-12 sm:p-16 lg:p-24"
+                          : "object-cover"
+                      }
+                      containerClassName="relative w-full h-full"
+                    />
                   </motion.div>
                 );
-              }
-
-              // Special layout for third image in modular project (LEAF)
-              if (slug === 'modular' && index === 2) {
-                return (
-                  <motion.div
-                    key={index}
-                    className="relative w-full rounded-xl sm:rounded-2xl overflow-hidden"
-                    style={{ backgroundColor: '#1a1a1a' }}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
-                      {/* Left side - Text content */}
-                      <div className="lg:col-span-2 p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
-                        <h2 className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold mb-6 sm:mb-8">
-                          MODULAR UNIT<br />
-                          <span className="font-black">LEAF</span>
-                        </h2>
-
-                        {/* Dimensions */}
-                        <div className="flex items-start gap-3 mb-4">
-                          <div className="shrink-0 w-8 h-8 flex items-center justify-center">
-                            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 6v12M18 6v12" />
-                            </svg>
-                          </div>
-                          <div className="text-white">
-                            <p className="text-base sm:text-lg">
-                              Dimensions <span className="font-bold">5.5 x 3.75</span> m
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Area */}
-                        <div className="flex items-start gap-3 mb-6 sm:mb-8">
-                          <div className="shrink-0 w-8 h-8 flex items-center justify-center">
-                            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
-                          </div>
-                          <div className="text-white">
-                            <p className="text-base sm:text-lg">
-                              Total area <span className="font-bold">20.5</span> m²
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Description */}
-                        <p className="text-white text-sm sm:text-base leading-relaxed">
-                          Designed as an ideal solution for modern lifestyle – mobile, 
-                          energy-efficient, and aesthetically exceptional.
-                        </p>
-                      </div>
-
-                      {/* Right side - Floor plan */}
-                      <div className="lg:col-span-3 relative h-64 sm:h-96 lg:h-150 flex items-center justify-center p-6 lg:p-8">
-                        <div className="relative w-full h-full">
-                          <Image
-                            src={image}
-                            alt="Modular House Floor Plan LEAF"
-                            fill
-                            className="object-contain"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              }
-
-              // Regular image display for other images
-              return (
-                <motion.div
-                  key={index}
-                  className="relative w-full h-64 sm:h-96 md:h-125 lg:h-150 xl:h-175 rounded-xl sm:rounded-2xl overflow-hidden"
-                  style={image.endsWith('.svg') ? { backgroundColor: '#0a0a0a' } : {}}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                >
-                  <ParallaxImage
-                    src={image}
-                    alt={`${project.title} screenshot ${index + 1}`}
-                    className={image.endsWith('.svg') ? 'object-contain p-12 sm:p-16 lg:p-24' : 'object-cover'}
-                    containerClassName="relative w-full h-full"
-                  />
-                </motion.div>
-              );
-            })}
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Results Section */}
-        <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-24 lg:py-32" style={{ maxWidth: "1500px" }}>
-          <h2
-            className="font-normal leading-tight mb-12 sm:mb-16 text-black text-center text-3xl sm:text-4xl lg:text-5xl xl:text-[55px]"
-            style={{ letterSpacing: "-0.05em" }}
+        {slug !== "modular3d" && (
+          <div
+            className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-24 lg:py-32"
+            style={{ maxWidth: "1500px" }}
           >
-            Impact & results.
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16">
-            {project.results.map((result: ProjectResult, index: number) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-              >
-                <div
-                  className="font-normal mb-4 bg-linear-to-r from-[#C388F8] to-[#9b59b6] bg-clip-text text-transparent text-5xl sm:text-6xl lg:text-7xl xl:text-[72px]"
+            <h2
+              className="font-normal leading-tight mb-12 sm:mb-16 text-black text-center text-3xl sm:text-4xl lg:text-5xl xl:text-[55px]"
+              style={{ letterSpacing: "-0.05em" }}
+            >
+              Impact & results.
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16">
+              {project.results.map((result: ProjectResult, index: number) => (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                >
+                  <div
+                    className="font-normal mb-4 bg-linear-to-r from-[#C388F8] to-[#9b59b6] bg-clip-text text-transparent text-5xl sm:text-6xl lg:text-7xl xl:text-[72px]"
+                    style={{ letterSpacing: "-0.05em" }}
+                  >
+                    {result.metric}
+                  </div>
+                  <p className="text-gray-600 text-base sm:text-lg font-light">
+                    {result.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Modular 3D — Process Steps + Feature */}
+        {slug === "modular3d" && (
+          <>
+            {/* Editorial process section */}
+            <div
+              className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] pt-24 sm:pt-32 lg:pt-40 pb-24 sm:pb-32 lg:pb-40"
+              style={{ maxWidth: "1500px" }}
+            >
+              <p className="text-xs text-gray-400 mb-20 sm:mb-24 uppercase tracking-[0.25em]">
+                The Process
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  {
+                    number: "01",
+                    title: "Algorithm",
+                    description:
+                      "We built a layout generation algorithm seeded with initial module configurations. It understands the rules of modular construction — which sides connect, how orientations work — and generates new valid arrangements from existing ones.",
+                  },
+                  {
+                    number: "02",
+                    title: "2D First",
+                    description:
+                      "Before touching 3D, we validated the layout logic in 2D. Every generated floor plan is structurally sound — the right sides connect to the right sides, every time.",
+                  },
+                  {
+                    number: "03",
+                    title: "3D Modeling",
+                    description:
+                      "Each module was packed into a single GLB containing every possible element — roofs, doors, facades. The app unpacks and toggles components per module on demand, keeping the asset pipeline lean and fully flexible.",
+                  },
+                  {
+                    number: "04",
+                    title: "Live Scene",
+                    description:
+                      "Configurations are rendered in real time with Three.js. Clients explore their design, then export it directly to AI tools for environment generation and final renders.",
+                  },
+                ].map((step) => (
+                  <div
+                    key={step.number}
+                    className="border-t border-black pt-10 pb-20 sm:pb-24 pr-0 lg:pr-14"
+                  >
+                    <p className="text-[11px] text-gray-400 mb-12 tabular-nums tracking-widest">
+                      {step.number}
+                    </p>
+                    <h3
+                      className="text-black font-normal text-2xl sm:text-3xl lg:text-4xl mb-8"
+                      style={{ letterSpacing: "-0.04em" }}
+                    >
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed font-light">
+                      {step.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Feature spotlight */}
+              <div className="text-center max-w-3xl mx-auto mt-32 sm:mt-40">
+                <h2
+                  className="font-normal leading-tight mb-6 sm:mb-8 text-black text-3xl sm:text-4xl lg:text-5xl xl:text-[55px]"
                   style={{ letterSpacing: "-0.05em" }}
                 >
-                  {result.metric}
-                </div>
-                <p className="text-gray-600 text-base sm:text-lg font-light">
-                  {result.label}
+                  Real-time 3D visualization.
+                </h2>
+                <p className="text-gray-500 font-light text-base sm:text-lg leading-relaxed">
+                  The layout engine doesn't just display pre-built designs — it
+                  generates them. Seeded with an initial set of valid
+                  configurations and the rules of modular assembly, it produces
+                  new arrangements on demand. Every floor plan is structurally
+                  correct, and every 3D scene updates instantly as clients
+                  explore their options.
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+              </div>
+            </div>
+
+            {/* Light feature section — file generation */}
+            <div className="bg-gray-50 py-20 sm:py-28 lg:py-36 px-4 sm:px-6">
+              <div
+                className="mx-auto w-full lg:w-[85%]"
+                style={{ maxWidth: "1500px" }}
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-20 sm:mb-28 lg:mb-32">
+                  <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
+                    <video
+                      src="/projects/generator/video1.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
+                    <video
+                      src="/projects/generator/video2.mp4"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div className="text-center max-w-3xl mx-auto">
+                  <h2
+                    className="font-normal leading-tight mb-6 sm:mb-8 text-black text-3xl sm:text-4xl lg:text-5xl xl:text-[55px]"
+                    style={{ letterSpacing: "-0.05em" }}
+                  >
+                    One file, every element.
+                  </h2>
+                  <p className="text-gray-500 font-light text-base sm:text-lg leading-relaxed">
+                    Each module is a single packed GLB — roof types, door
+                    variations, front and back facades all bundled inside. The
+                    configurator unpacks and toggles each element individually,
+                    so there's no library to maintain and no re-exports when
+                    something changes. Add a glass roof, swap a facade, remove
+                    the doors — all live, all instant.
+                  </p>
+                </div>
+
+                {/* Authorship credit block */}
+                <div className="mt-24 sm:mt-32 flex flex-col items-center text-center gap-6">
+                  <p className="text-xs text-gray-400 uppercase tracking-[0.25em]">
+                    Built in collaboration
+                  </p>
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <span
+                      className="text-black font-normal text-2xl sm:text-3xl lg:text-4xl"
+                      style={{ letterSpacing: "-0.04em" }}
+                    >
+                      Digantix
+                    </span>
+                    <span className="text-gray-300 text-2xl sm:text-3xl font-light">
+                      ×
+                    </span>
+                    <span
+                      className="text-black font-normal text-2xl sm:text-3xl lg:text-4xl"
+                      style={{ letterSpacing: "-0.04em" }}
+                    >
+                      Modular Houses
+                    </span>
+                  </div>
+                  <p className="text-xs text-gray-400 font-light max-w-sm leading-relaxed">
+                    © {new Date().getFullYear()} — Proprietary work. Design,
+                    technology, and all content may not be reproduced without
+                    written permission.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
 
         {/* Next Project CTA */}
-        <div className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-24 lg:py-32 border-t border-gray-200" style={{ maxWidth: "1500px" }}>
+        <div
+          className="mx-auto w-full px-4 sm:px-6 lg:w-[85%] py-16 sm:py-24 lg:py-32 border-t border-gray-200"
+          style={{ maxWidth: "1500px" }}
+        >
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-4">
             <div>
-              <p className="text-xs sm:text-sm text-gray-400 mb-4">NEXT PROJECT</p>
+              <p className="text-xs sm:text-sm text-gray-400 mb-4">
+                NEXT PROJECT
+              </p>
               <h3
                 className="font-normal leading-tight text-black text-3xl sm:text-4xl lg:text-5xl xl:text-[48px]"
                 style={{ letterSpacing: "-0.05em" }}

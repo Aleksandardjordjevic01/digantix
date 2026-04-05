@@ -79,6 +79,38 @@ const projects: Project[] = [
     image: "/projects/idcom/i2.jpg",
     link: "/projects/idcom",
     tags: ["featured", "web"]
+  },
+  {
+    id: 9,
+    title: "Majice.rs",
+    category: "E-commerce Platform",
+    image: "/projects/majice/majicem3.jpg",
+    link: "/projects/majice",
+    tags: ["featured", "web"]
+  },
+  {
+    id: 10,
+    title: "Modular Houses 3D Generator",
+    category: "Web Application",
+    image: "/projects/generator/generator-logo.png",
+    link: "/projects/modular3d",
+    tags: ["featured", "web"]
+  },
+  {
+    id: 11,
+    title: "Divine Park Hotel",
+    category: "Web Design & Development",
+    image: "/projects/divine/divine7.jpg",
+    link: "/projects/divinehotel",
+    tags: ["featured", "web"]
+  },
+  {
+    id: 12,
+    title: "SerWiss Operations",
+    category: "Web Development",
+    image: "/projects/serwiss/serwiss2.jpg",
+    link: "/projects/serwiss",
+    tags: ["featured", "web"]
   }
 ];
 
@@ -201,14 +233,20 @@ export default function ProjectsPage() {
                     <div className="w-full">
                       {/* Project Image Container */}
                       <div 
-                        className="relative w-full aspect-4/5 rounded-[5px] overflow-hidden mb-4 sm:mb-6 flex items-center justify-center"
-                        style={project.image.endsWith('.svg') ? { backgroundColor: '#0a0a0a' } : {}}
+                        className={`relative w-full aspect-4/5 rounded-[5px] overflow-hidden mb-4 sm:mb-6 flex items-center justify-center`}
+                        style={
+                          project.image.endsWith('.svg')
+                            ? { backgroundColor: '#0a0a0a' }
+                            : project.link.includes('modular3d')
+                            ? { boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.07), 0 4px 24px rgba(0,0,0,0.06)' }
+                            : {}
+                        }
                       >
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
-                        className={project.image.endsWith('.svg') ? 'object-contain p-12' : 'object-cover'}
+                        className={project.image.endsWith('.svg') || project.link.includes('modular3d') ? 'object-contain p-14' : 'object-cover'}
                       />
 
                       {/* Hover Overlay */}
