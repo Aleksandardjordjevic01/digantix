@@ -26,11 +26,11 @@ export default function Header({ dark = false }: HeaderProps) {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300 ease-in-out ${
-        dark ? 'bg-black/80' : 'bg-white/80'
+        isMenuOpen ? 'bg-transparent' : dark ? 'bg-black/80' : 'bg-white/80'
       }`}>
         <nav className="mx-auto px-4 sm:px-6 lg:px-8 w-full sm:w-[90%]" style={{ maxWidth: '1700px' }}>
           <div className="flex items-center justify-between py-6">
-            <Logo dark={dark} />
+            <Logo dark={isMenuOpen || dark} />
             
             {/* Hamburger Menu Button */}
             <button
@@ -40,21 +40,21 @@ export default function Header({ dark = false }: HeaderProps) {
             >
               <span 
                 className={`block h-0.5 w-6 transition-all duration-300 ease-in-out ${
-                  dark ? 'bg-white' : 'bg-black'
+                  isMenuOpen || dark ? 'bg-white' : 'bg-black'
                 } ${
                   isMenuOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span 
                 className={`block h-0.5 w-6 transition-all duration-300 ease-in-out ${
-                  dark ? 'bg-white' : 'bg-black'
+                  isMenuOpen || dark ? 'bg-white' : 'bg-black'
                 } ${
                   isMenuOpen ? 'opacity-0' : ''
                 }`}
               />
               <span 
                 className={`block h-0.5 w-6 transition-all duration-300 ease-in-out ${
-                  dark ? 'bg-white' : 'bg-black'
+                  isMenuOpen || dark ? 'bg-white' : 'bg-black'
                 } ${
                   isMenuOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
