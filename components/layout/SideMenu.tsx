@@ -63,21 +63,27 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
   });
 
   useEffect(() => {
-    document.body.style.transition = "background-color 0.4s cubic-bezier(0.76, 0, 0.24, 1)";
+    const transition = "background-color 0.4s cubic-bezier(0.76, 0, 0.24, 1)";
+    document.body.style.transition = transition;
+    document.documentElement.style.transition = transition;
     if (isOpen) {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
       document.body.style.backgroundColor = "#000";
+      document.documentElement.style.backgroundColor = "#000";
     } else {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
       document.body.style.backgroundColor = "";
+      document.documentElement.style.backgroundColor = "";
     }
     return () => {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
       document.body.style.backgroundColor = "";
+      document.documentElement.style.backgroundColor = "";
       document.body.style.transition = "";
+      document.documentElement.style.transition = "";
     };
   }, [isOpen]);
 
