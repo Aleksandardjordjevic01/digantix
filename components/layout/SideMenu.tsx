@@ -66,16 +66,27 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
     const transition = "background-color 0.4s cubic-bezier(0.76, 0, 0.24, 1)";
     document.body.style.transition = transition;
     document.documentElement.style.transition = transition;
+
+    // Update iOS status bar color
+    let metaThemeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+    if (!metaThemeColor) {
+      metaThemeColor = document.createElement("meta");
+      metaThemeColor.name = "theme-color";
+      document.head.appendChild(metaThemeColor);
+    }
+
     if (isOpen) {
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
       document.body.style.backgroundColor = "#000";
       document.documentElement.style.backgroundColor = "#000";
+      metaThemeColor.content = "#000000";
     } else {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
       document.body.style.backgroundColor = "";
       document.documentElement.style.backgroundColor = "";
+      metaThemeColor.content = "#ffffff";
     }
     return () => {
       document.body.style.overflow = "";
@@ -84,6 +95,7 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
       document.documentElement.style.backgroundColor = "";
       document.body.style.transition = "";
       document.documentElement.style.transition = "";
+      if (metaThemeColor) metaThemeColor.content = "#ffffff";
     };
   }, [isOpen]);
 
