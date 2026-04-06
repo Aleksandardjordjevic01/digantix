@@ -190,10 +190,10 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             className="w-full border-t border-neutral-800"
           >
             <div
-              className="mx-auto px-4 sm:px-6 lg:px-8 w-full sm:w-[90%] py-8 flex items-center justify-between gap-6"
+              className="mx-auto px-4 sm:px-6 lg:px-8 w-full sm:w-[90%] py-8 flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-between sm:gap-6"
               style={{ maxWidth: "1700px" }}
             >
-              <p className="text-neutral-300 text-xs sm:text-base leading-relaxed">
+              <p className="text-neutral-300 text-xs sm:text-base leading-relaxed text-center sm:text-left">
                 Ready to build something great?{" "}
                 <a
                   href="mailto:office@digantix.com"
@@ -202,16 +202,16 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
                   Let&apos;s talk
                 </a>
               </p>
-              <div className="text-right shrink-0">
+              <div className="flex flex-col items-center gap-1.5 sm:items-end sm:shrink-0">
                 <a
                   href="mailto:office@digantix.com"
-                  className="block text-white text-xs sm:text-base hover:text-neutral-300 transition-colors duration-300"
+                  className="text-white text-xs sm:text-base hover:text-neutral-300 transition-colors duration-300"
                 >
                   office@digantix.com
                 </a>
                 <a
                   href="tel:+381641482998"
-                  className="block text-white text-xs sm:text-base mt-1 hover:text-neutral-300 transition-colors duration-300"
+                  className="text-neutral-400 text-xs sm:text-base hover:text-neutral-300 transition-colors duration-300"
                 >
                   +381 64 148 2998
                 </a>
