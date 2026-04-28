@@ -182,7 +182,7 @@ export default function AboutUsPage() {
       </div>
 
       {/* Team Carousel Section */}
-      <TeamCarousel />
+      {/* <TeamCarousel /> */}
 
       {/* Black Section - Let's Work Together */}
       <div id="black-section" className="min-h-screen bg-black text-white">
